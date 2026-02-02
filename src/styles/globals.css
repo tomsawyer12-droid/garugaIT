@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Nugsoft Brand Colors - Emerald Theme */
+  --nugsoft-navy: #0F2027;
+  --nugsoft-teal: #1B3A4B;
+  --nugsoft-emerald: #10B981;
+  --nugsoft-emerald-dark: #059669;
+  --nugsoft-dark-bg: #0A1A1F;
+  --nugsoft-offwhite: #F8FAFC;
+  --nugsoft-gray: #94A3B8;
+  --nugsoft-light-gray: #CBD5E1;
+  
+  /* Design System */
+  --font-size: 16px;
+  --background: #0F2027;
+  --foreground: #F8FAFC;
+  --card: #1B3A4B;
+  --card-foreground: #F8FAFC;
+  --popover: #1B3A4B;
+  --popover-foreground: #F8FAFC;
+  --primary: #10B981;
+  --primary-foreground: #ffffff;
+  --secondary: #1B3A4B;
+  --secondary-foreground: #F8FAFC;
+  --muted: #2A4A5A;
+  --muted-foreground: #94A3B8;
+  --accent: #10B981;
+  --accent-foreground: #ffffff;
+  --destructive: #EF4444;
+  --destructive-foreground: #ffffff;
+  --border: rgba(16, 185, 129, 0.15);
+  --input: rgba(16, 185, 129, 0.2);
+  --input-background: #1B3A4B;
+  --switch-background: #2A4A5A;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #10B981;
+  --chart-1: #10B981;
+  --chart-2: #059669;
+  --chart-3: #1B3A4B;
+  --chart-4: #2A4A5A;
+  --chart-5: #94A3B8;
+  --radius: 12px;
+  --sidebar: #0F2027;
+  --sidebar-foreground: #F8FAFC;
+  --sidebar-primary: #10B981;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #1B3A4B;
+  --sidebar-accent-foreground: #F8FAFC;
+  --sidebar-border: rgba(16, 185, 129, 0.15);
+  --sidebar-ring: #10B981;
+}
+
+.dark {
+  --background: #0F2027;
+  --foreground: #F8FAFC;
+  --card: #1B3A4B;
+  --card-foreground: #F8FAFC;
+  --popover: #1B3A4B;
+  --popover-foreground: #F8FAFC;
+  --primary: #10B981;
+  --primary-foreground: #ffffff;
+  --secondary: #1B3A4B;
+  --secondary-foreground: #F8FAFC;
+  --muted: #2A4A5A;
+  --muted-foreground: #94A3B8;
+  --accent: #10B981;
+  --accent-foreground: #ffffff;
+  --destructive: #EF4444;
+  --destructive-foreground: #ffffff;
+  --border: rgba(16, 185, 129, 0.15);
+  --input: rgba(16, 185, 129, 0.2);
+  --ring: #10B981;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: #10B981;
+  --chart-2: #059669;
+  --chart-3: #1B3A4B;
+  --chart-4: #2A4A5A;
+  --chart-5: #94A3B8;
+  --sidebar: #0F2027;
+  --sidebar-foreground: #F8FAFC;
+  --sidebar-primary: #10B981;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #1B3A4B;
+  --sidebar-accent-foreground: #F8FAFC;
+  --sidebar-border: rgba(16, 185, 129, 0.15);
+  --sidebar-ring: #10B981;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=' text-']), :not(:has([class^='text-'])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+}
+
+/* Custom Utilities */
+@layer utilities {
+  .glass-morphism {
+    background: rgba(27, 58, 75, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(16, 185, 129, 0.18);
+  }
+  
+  .dark .glass-morphism {
+    background: rgba(27, 58, 75, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(16, 185, 129, 0.18);
+  }
+  
+  .soft-shadow {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  }
+  
+  .soft-shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+  }
+  
+  .soft-shadow-xl {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+  }
+}

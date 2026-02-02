@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import { Target, Heart, Zap, Users, Award, Shield, TrendingUp, Globe, ExternalLink } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import beekaArnoldImage from 'figma:asset/4d9b0a6734c39d9ad0358963f61ac41f315bc977.png';
-import atahoPrinceImage from 'figma:asset/2308e27887ab35a161aa7236dfb9899826445f87.png';
+import atahoPrinceImage from '../assets/ataho-prince.jpg';
 import rwendeireJoshuaImage from 'figma:asset/9830ef8174352715de651894e5d2285c8d24a5a2.png';
 
 interface AboutPageProps {
